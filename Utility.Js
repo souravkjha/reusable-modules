@@ -19,6 +19,7 @@ function formattedDate(date, separator) {
     function insert
     @param - inputValue, string to insert between other string
     @param - index,  indix on which string needs to be inserted
+    return - final string, after insert of the string on given position
  */
      String.prototype.insert = function (inputValue, index) {
     	    if (index > 0) return this.substring(0, index) + inputValue + this.substring(index, this.length);
