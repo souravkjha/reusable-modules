@@ -15,7 +15,7 @@ function formattedDate(date, separator) {
     return [month, day, year].join(separator);
 }
 
- /* To insert an string including special characters in the given index of other string
+ /* To insert a string including special characters in the given index of other string
     function insert
     @param - inputValue, string to insert between other string
     @param - index,  indix on which string needs to be inserted
