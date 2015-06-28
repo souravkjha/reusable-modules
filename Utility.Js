@@ -14,3 +14,14 @@ function formattedDate(date, separator) {
     if (day.length < 2) day = '0' + day;
     return [month, day, year].join(separator);
 }
+
+ /* To insert an string including special characters in the given index of other string
+    function insert
+    @param - inputValue, string to insert between other string
+    @param - index,  indix on which string needs to be inserted
+ */
+     String.prototype.insert = function (inputValue, index) {
+    	    if (index > 0) return this.substring(0, index) + inputValue + this.substring(index, this.length);
+    	    else return inputValue + this;
+    	};
+
