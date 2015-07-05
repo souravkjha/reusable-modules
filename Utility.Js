@@ -25,4 +25,46 @@ function formattedDate(date, separator) {
     	    if (index > 0) return this.substring(0, index) + inputValue + this.substring(index, this.length);
     	    else return inputValue + this;
     	};
+    	
+ /* To delete given item from an array	 
+    @param - array from which value to be deleted
+    @param - value which needs to be deleted from the given array
+    return - array after deletion of the value
+    */
+    function deleteItemFromArray(ArrayValue, value) {
+        for (item in ArrayValue) {
+            if (ArrayValue[item] == value) {
+                ArrayValue.splice(item, 1);
+                break;
+            }
+        }
+        return ArrayValue;
+    }    
+/* Remove duplicates from an array/object
+    @param - array/boject fwhich may have duplicate value
+    return - array/object after removal of duplicates
+*/
+    function removeDuplicates(dupArr) {
+        var uniqueArr = [];
+        $.each(dupArr, function (i, el) {
+            if ($.inArray(el, uniqueArr) === -1) uniqueArr.push(el);
+        });
+        return uniqueArr;
+    }
 
+ /* To check if an item exists in an array/object 
+    @param - array in which value is to be found
+    @param - value which needs to be searched
+    return - boolean true/false if item present/absent
+    */
+    
+    function searchItemInArray(ArrayValue, value) {
+        var itemPresentFlag = false;
+        for (item in ArrayValue) {
+            if (ArrayValue[item] == value) {
+                itemPresentFlag = true;
+                break;
+            }
+        }
+        return itemPresentFlag;
+    }
