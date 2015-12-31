@@ -68,3 +68,19 @@ function formattedDate(date, separator) {
         }
         return itemPresentFlag;
     }
+  /* To show the lists meeting search criteria
+    @param - string to Search
+    @param - list id on which string to be search
+    return - void
+    */   
+    function searchStoryInList(storyStr,listId){
+        var myTag = "#"+listId;
+         $(" "+myTag+" > li").each(function() {
+            if ($(this).text().search(new RegExp(storyStr, "i")) > -1) {
+                $(this).slideDown();
+            }
+            else {
+                $(this).slideUp();
+            }
+        });
+    }
